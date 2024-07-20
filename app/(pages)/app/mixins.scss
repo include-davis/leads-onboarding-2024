@@ -1,0 +1,12 @@
+/* make sure to import mixin into global!! */
+
+@mixin example_name {
+    @media  and (max-width: 800px) {
+        @content
+    }
+}
+
+@include mixins.example {
+
+}
+
