@@ -1,0 +1,6 @@
+@mixin example { 
+    // feel free to set up more mixins 
+    @media screen and (max-width: 800px) {
+        @content
+    }
+}
