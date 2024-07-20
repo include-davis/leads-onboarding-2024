@@ -1,0 +1,42 @@
+@use './mixins.scss';
+
+:root {
+  --color1: #4287f5;
+  --color2: #eba134;
+
+  --text-color1: #4a5566;
+  --text-color2: #f0f6ff;
+
+  --navbar-height: 80px;
+
+  --padding-large: 80px;
+}
+
+@media screen and (max-width: 800px) {
+  :root {
+    --navbar-height: 60px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-primary);
+}
+
+@include mixins.example {
+  :root {
+    --navbar-height: 60px;
+  }
+}
