@@ -41,9 +41,8 @@
     max-width: 900px;
     position: relative; // necessary for Image fill
     transform: translateY(-50%);
-}
 
-.designImage {
+    background: url("../../../public/design-home.png") 100% / cover no-repeat;
     border-radius: 20px;
 }
 

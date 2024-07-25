@@ -10,7 +10,6 @@ export default function Day1() {
         </div>
       <div className={styles.bottomSection}>
         <div className={styles.designImageContainer}>
-          <Image src="/design-home.png" alt="figma design" fill="true" className={styles.designImage}></Image>
         </div>
         <div className={styles.recentWork}>
           <div className={styles.recentWorkTitleIcon}>
