@@ -1,20 +1,22 @@
 import styles from "./page.module.scss";
 import Image from "next/image";
 
-export default function WorkCard() {
+export default function WorkCard({content}) {
     return (
         <div className={styles.card}>
             <div className={styles.cardContent}>
                 <div className={styles.upperContent}>
-                    <p>COHORT TIME</p>
+                    <p>{content.date}</p>
                     <div className={styles.imageContainer}>
-                        
+                        <Image fill="true" alt={content.alt} src={content.image} 
+                            sizes="(min-width: 720px) 50vw (min-width: 0) 100vw">
+                        </Image>
                     </div>
                 </div>
                 <hr></hr>
                 <div className={styles.lowerContent}>
-                    <h6>title of project</h6>
-                    <p>project description</p>
+                    <h6>{content.title}</h6>
+                    <p>{content.description}</p>
                 </div>
             </div>
             <button className={styles.cardButton}>

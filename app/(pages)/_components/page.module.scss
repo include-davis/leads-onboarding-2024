@@ -13,7 +13,7 @@
     align-items: stretch;
     gap: 20px;
     border-radius: 20px;
-    
+    max-width: 524px;
 }
 
 .cardContent {
@@ -56,9 +56,11 @@
 
 .imageContainer {
     background-color: lightgray;
-    height: 300px;
+    max-height: 300px;
     aspect-ratio: 1.75;
     border-radius: 8px;
+    position: relative;
+    
 }
 
 .lowerContent {
