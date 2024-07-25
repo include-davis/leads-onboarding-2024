@@ -1,5 +1,6 @@
 import styles from "./page.module.scss";
 import Image from "next/image";
+import WorkCard from "../_components/work_card";
 
 export default function Day1() {
   return (
@@ -20,6 +21,19 @@ export default function Day1() {
             <h2>Recent Work</h2>
           </div>
           <p>Transforming ideas into incredible realities is what we do best.</p>
+          <div className={styles.cardGroupContainer}>
+            <WorkCard></WorkCard>
+            <WorkCard></WorkCard>
+            <WorkCard></WorkCard>
+            <WorkCard></WorkCard>
+            {/* convert these cards to js function */}
+            <p>AND MORE...</p>
+          </div>
+        </div>
+        <div className={styles.ourPillars}>
+          <Image src="" alt="pillars icon" height="80" width="80"></Image>
+          <h2>Our Pillars</h2>
+          <p>What inspires us as an org</p>
         </div>
       </div>
       

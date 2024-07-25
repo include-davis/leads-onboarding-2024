@@ -5,7 +5,6 @@
     --top-height: 400px;
     --gap-size: 250px;
     --main-padding: 50px;
-    height: 100%;
 
     h2 {
         font-size: 3.785rem;
@@ -15,11 +14,6 @@
 .body {
     font-size: 10rem;
     color: var(--text-color1);
-    height: 100%;
-}
-
-.topSection {
-    width: 100%;
 }
 
 .topContent {
@@ -55,7 +49,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 600px; //temporary
 
     padding: var(--main-padding);
     padding-top: 0;
