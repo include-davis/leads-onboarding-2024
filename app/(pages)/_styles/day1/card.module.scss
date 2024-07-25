@@ -1,0 +1,26 @@
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 583px;
+    height: 673px; 
+    border-radius: 16px;
+    padding: 30px;
+}
+
+.quarter {
+    color: var(--color-white);
+}
+
+.projectName {
+    color: var(--color-white); 
+}
+
+.description {
+    color: var(--color-gray);
+}
+
+.imgContainer {
+    position: relative; 
+    width: 523px;
+    height: 300px;
+    
+}
