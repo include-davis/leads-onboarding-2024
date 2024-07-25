@@ -9,28 +9,29 @@ export default function Day1() {
           <h2>Our mission is to design creative digital solutions that have a positive social impact</h2>
         </div>
       <div className={styles.bottomSection}>
-        <div className={styles.designImageContainer}>
-        </div>
-        <div className={styles.recentWork}>
-          <div className={styles.recentWorkTitleIcon}>
-            <Image src="/pen_icon.png" alt="pen icon" height="80" width="80"></Image>
-            <h3>Recent Work</h3>
+        <div className={styles.designImage}></div>
+        <div className={styles.bottomContent}>
+          <div className={styles.recentWork}>
+            <div className={styles.recentWorkTitleIcon}>
+              <Image src="/pen_icon.png" alt="pen icon" height="80" width="80"></Image>
+              <h3>Recent Work</h3>
+            </div>
+            <p>Transforming ideas into incredible realities is what we do best.</p>
+            <div className={styles.cardGroupContainer}>
+              <WorkCard></WorkCard>
+              <WorkCard></WorkCard>
+              <WorkCard></WorkCard>
+              <WorkCard></WorkCard>
+              {/* convert these cards to js function */}
+              <p>AND MORE...</p>
+            </div>
           </div>
-          <p>Transforming ideas into incredible realities is what we do best.</p>
-          <div className={styles.cardGroupContainer}>
-            <WorkCard></WorkCard>
-            <WorkCard></WorkCard>
-            <WorkCard></WorkCard>
-            <WorkCard></WorkCard>
-            {/* convert these cards to js function */}
-            <p>AND MORE...</p>
-          </div>
-        </div>
-        <div className={styles.ourPillars}>
-          <div className={styles.ourPillarsHeader}>
-            <Image src="/greek_pillar.png" alt="pillars icon" height="80" width="80"></Image>
-            <h3>Our Pillars</h3>
-            <p>What inspires us as an org</p>
+          <div className={styles.ourPillars}>
+            <div className={styles.ourPillarsHeader}>
+              <Image src="/greek_pillar.png" alt="pillars icon" height="80" width="80"></Image>
+              <h3>Our Pillars</h3>
+              <p>What inspires us as an org</p>
+            </div>
           </div>
         </div>
       </div>

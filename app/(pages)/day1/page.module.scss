@@ -35,10 +35,10 @@
     }
 }
 
-.designImageContainer {
+.designImage {
     width: 60%;
-    aspect-ratio: 2;
     max-width: 900px;
+    aspect-ratio: 2;
     position: relative; // necessary for Image fill
     transform: translateY(-50%);
 
@@ -53,8 +53,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--gap-size);
     padding-bottom: var(--gap-size);
+}
+
+.bottomContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap-size);
+    
 }
 
 .recentWork, .ourPillars {
