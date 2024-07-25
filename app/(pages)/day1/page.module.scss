@@ -7,7 +7,10 @@
     --main-padding: 50px;
 
     h2 {
-        font-size: 3.785rem;
+        font-size: 3.875rem;
+    }
+    h3 {
+        font-size: 3.25rem;
     }
 }
 
@@ -16,16 +19,18 @@
     color: var(--text-color1);
 }
 
-.topContent {
+.topSection {
+    height: calc(500px + var(--main-padding) * 2);
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 
-    padding: var(--main-padding);
-    padding-bottom: calc(var(--gap-size) * 0.5 + var(--main-padding));
+    padding-bottom: 225px;
 
     h2 {
+        width: 60%;
         text-align: center;
     }
 }
@@ -49,8 +54,27 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-
-    padding: var(--main-padding);
-    padding-top: 0;
+    gap: var(--gap-size);
+    padding-bottom: var(--gap-size);
 }
 
+.recentWork, .ourPillars {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+}
+
+.recentWorkTitleIcon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.ourPillarsHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
