@@ -1,5 +1,66 @@
+.main {
+    --include-purple: #3C257E;
+    --gradient-dark: #332950;
+
+    --top-height: 400px;
+    --gap-size: 250px;
+    --main-padding: 50px;
+    height: 100%;
+
+    h2 {
+        font-size: 3.785rem;
+    }
+}
+
 .body {
-    padding: var(--padding-large);
     font-size: 10rem;
     color: var(--text-color1);
+    height: 100%;
 }
+
+.topSection {
+    width: 100%;
+}
+
+.topContent {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: var(--main-padding);
+    padding-bottom: 15%;
+
+    h2 {
+        text-align: center;
+    }
+}
+
+.designImageContainerContainer {
+    width: 60%;
+    height: 0;
+    border-radius: 5px solid red;
+}
+
+.designImageContainer {
+    aspect-ratio: 2;
+    position: relative; // necessary for Image fill
+    transform: translateY(10%);
+}
+
+.designImage {
+    border-radius: 20px;
+}
+
+.bottomSection {
+    background-color: var(--include-purple);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px; //temporary
+
+    padding: var(--main-padding);
+}
+

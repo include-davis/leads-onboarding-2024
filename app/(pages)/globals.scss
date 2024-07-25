@@ -1,5 +1,9 @@
 @use './mixins.scss';
 
+html {
+  height: 100%;
+}
+
 :root {
   --color1: #4287f5;
   --color2: #eba134;
@@ -10,6 +14,8 @@
   --navbar-height: 80px;
 
   --padding-large: 80px;
+
+  height: 100%;
 }
 
 @media screen and (max-width: 800px) {
