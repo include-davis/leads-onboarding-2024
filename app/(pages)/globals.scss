@@ -1,21 +1,13 @@
 @use './mixins.scss';
 
-html {
-  height: 100%;
-}
-
 :root {
-  --color1: #4287f5;
-  --color2: #eba134;
-
-  --text-color1: #4a5566;
-  --text-color2: #f0f6ff;
+  --include-purple: #3C257E;
+  --gradient-dark: #332950;
+  --secondary-text: #D0D0D0;
 
   --navbar-height: 80px;
-
   --padding-large: 80px;
 
-  height: 100%;
 }
 
 @media screen and (max-width: 800px) {

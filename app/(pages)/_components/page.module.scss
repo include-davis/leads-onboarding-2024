@@ -1,0 +1,69 @@
+.card {
+    --frost-background: rgba(255, 255, 255, 0.1);
+    h6 {
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    background-color: var(--frost-background);
+    padding: 30px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 20px;
+    border-radius: 20px;
+    
+}
+
+.cardContent {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    hr {
+        border: none;
+        height: 1px;
+        background-color: var(--frost-background);
+    }
+}
+
+
+.cardButton {
+    display: flex;
+    background-color: var(--frost-background);
+    border: none;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    border-radius: 100px;
+    font-size: 1.125rem;
+    color: white;
+    cursor: pointer;
+}
+
+.upperContent {
+    font-size: 1.125rem;
+    color: var(--secondary-text);
+}
+
+.imageContainer {
+    background-color: lightgray;
+    height: 300px;
+    aspect-ratio: 1.75;
+    border-radius: 8px;
+}
+
+.lowerContent {
+    font-size: 1.5rem;
+    p {
+        color: var(--secondary-text);
+    }
+}

@@ -1,7 +1,4 @@
 .main {
-    --include-purple: #3C257E;
-    --gradient-dark: #332950;
-
     --top-height: 400px;
     --gap-size: 250px;
     --main-padding: 50px;
@@ -53,7 +50,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: var(--gap-size);
+    padding-bottom: 32px;
 }
 
 .bottomContent {
@@ -78,9 +75,33 @@
     gap: 12px;
 }
 
+.cardGroupContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    width: 100%;
+}
+
+.cardPair {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.recentWorkEndingText {
+    text-align: center;
+    color: var(--secondary-text);
+    font-size: 1.125rem;
+}
+
 .ourPillarsHeader {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 16px;
+}
+
+.subHeader {
+    color: var(--secondary-text);
+    font-size: 2rem;
 }

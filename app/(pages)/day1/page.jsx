@@ -16,21 +16,25 @@ export default function Day1() {
               <Image src="/pen_icon.png" alt="pen icon" height="80" width="80"></Image>
               <h3>Recent Work</h3>
             </div>
-            <p>Transforming ideas into incredible realities is what we do best.</p>
+            <p className={styles.subHeader}>Transforming ideas into incredible realities is what we do best.</p>
             <div className={styles.cardGroupContainer}>
-              <WorkCard></WorkCard>
-              <WorkCard></WorkCard>
-              <WorkCard></WorkCard>
-              <WorkCard></WorkCard>
+              <div className={styles.cardPair}>
+                <WorkCard></WorkCard>
+                <WorkCard></WorkCard>
+              </div>
+              <div className={styles.cardPair}>
+                <WorkCard></WorkCard>
+                <WorkCard></WorkCard>
+              </div>
               {/* convert these cards to js function */}
-              <p>AND MORE...</p>
+              <p className={styles.recentWorkEndingText}>AND MORE...</p>
             </div>
           </div>
           <div className={styles.ourPillars}>
             <div className={styles.ourPillarsHeader}>
               <Image src="/greek_pillar.png" alt="pillars icon" height="80" width="80"></Image>
               <h3>Our Pillars</h3>
-              <p>What inspires us as an org</p>
+              <p className={styles.subHeader}>What inspires us as an org</p>
             </div>
           </div>
         </div>
