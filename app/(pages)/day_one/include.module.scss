@@ -1,0 +1,60 @@
+// @use "/app/(pages)/mixins.scss";
+
+.page {
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(67, 14, 126);
+    color: white;
+
+    h1 {
+        font-size: 4rem;
+    }
+    h3 {
+        font-size: 2rem;
+        font-weight: 400;
+        opacity: .8;
+    }
+    p{
+        font-size: 1.5rem;
+    }
+}
+.header1 {
+    padding:50px;
+    width:60%;
+    // background-color: white;
+    // justify-content: center;
+    // align-content: center;
+    img{
+        border-radius: 10px;
+    }
+    // color:black;
+}
+.header2 {
+    padding:10px;
+}
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.project_card {
+    text-align: left;
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 25px;
+    width: 40vw;
+    padding: 25px;
+    border-radius: 20px;
+    
+    button {
+        padding:20px;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 30px;
+        border: none;
+        color: white;
+    }
+    img {
+        border-radius: 10px;
+    }
+}

@@ -1,12 +1,17 @@
+import styles from './include.module.scss'
+
 export function ProjectCard({cohort, image, image_alt, title, description}) {
     return(
-        <div>
+        <div className={styles.project_card}>
             <p>{cohort}</p>
             <img src={image} alt={image_alt}/>
-            {/* <line break> */}
+            <br/>
+            <hr/>
+            <br/>
             <p>{title}</p>
             <p>{description}</p>
-            <button>🟢VISIT SITE</button>
+            <br/>
+            <button className={styles.button}>🟢 VISIT SITE</button>
         </div>
     );
 }
