@@ -8,15 +8,17 @@ export default function WorkCard({content}) {
                 <div className={styles.upperContent}>
                     <p>{content.date}</p>
                     <div className={styles.imageContainer}>
-                        <Image fill="true" alt={content.alt} src={content.image} 
+                        <Image fill="true" alt={content.alt} src={content.image} className={styles.workImage}
                             sizes="(min-width: 720px) 50vw (min-width: 0) 100vw">
                         </Image>
                     </div>
                 </div>
-                <hr></hr>
                 <div className={styles.lowerContent}>
-                    <h6>{content.title}</h6>
-                    <p>{content.description}</p>
+                    <hr></hr>
+                    <div className={styles.lowerText}>
+                        <h5>{content.title}</h5>
+                        <p>{content.description}</p>
+                    </div>
                 </div>
             </div>
             <button className={styles.cardButton}>

@@ -1,3 +1,5 @@
+@use '/app/(pages)/mixins.scss';
+
 .main {
     --top-height: 400px;
     --gap-size: 250px;
@@ -9,11 +11,22 @@
     h3 {
         font-size: 3.25rem;
     }
-}
 
-.body {
-    font-size: 10rem;
-    color: var(--text-color1);
+    @include mixins.phone {
+        --gap-size: 100px;
+        h2 {
+            font-size: 2.875rem;
+        }
+        h3 {
+            font-size: 2rem;
+        }
+    }
+
+    @include mixins.sm-phone {
+        h2 {
+            font-size: 2rem;
+        }
+    }
 }
 
 .topSection {
@@ -30,6 +43,36 @@
         width: 60%;
         text-align: center;
     }
+
+    @include mixins.sm-desktop {
+        padding: 0 16px;
+
+        h2 {
+            width: 100%;
+        }
+    }
+
+    @include mixins.phone {
+        height: calc(280px + var(--main-padding) * 2);
+    }
+
+    @include mixins.sm-phone {
+        height: calc(200px + var(--main-padding) * 2);
+    }
+}
+
+.bottomSection {
+    background-color: var(--include-purple);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 32px;
+
+    @include mixins.phone {
+        padding: 0 16px;
+    }
 }
 
 .designImage {
@@ -41,16 +84,15 @@
 
     background: url("../../../public/design-home.png") 100% / cover no-repeat;
     border-radius: 20px;
-}
 
-.bottomSection {
-    background-color: var(--include-purple);
-    color: white;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 32px;
+    @include mixins.phone {
+        background: url("../../../public/design-home.png") 100% / cover no-repeat fixed;
+        background-position: center;
+        aspect-ratio: 0.8;
+        transform: translateY(-8%);
+        width: 100%;
+        margin-bottom: 12%;
+    }
 }
 
 .bottomContent {
@@ -59,6 +101,9 @@
     align-items: center;
     gap: var(--gap-size);
     
+    @include mixins.phone {
+        align-items: flex-start;
+    }
 }
 
 .recentWork, .ourPillars {
@@ -66,6 +111,10 @@
     flex-direction: column;
     gap: 32px;
     align-items: center;
+
+    @include mixins.phone {
+        align-items: flex-start;
+    }
 }
 
 .recentWorkTitleIcon {
@@ -73,6 +122,21 @@
     flex-direction: column;
     align-items: center;
     gap: 12px;
+
+    @include mixins.phone {
+        align-items: flex-start;
+    }
+}
+
+.iconContainer {
+    width: 80px;
+    height: 80px;
+    position: relative;
+
+    @include mixins.phone {
+        width: 40px;
+        height: 40px;
+    }
 }
 
 .cardGroupContainer {
@@ -86,6 +150,10 @@
     display: flex;
     flex-direction: row;
     gap: 32px;
+
+    @include mixins.phone {
+        flex-direction: column;
+    }
 }
 
 .recentWorkEndingText {
@@ -99,9 +167,17 @@
     flex-direction: column;
     align-items: center;
     gap: 16px;
+
+    @include mixins.phone {
+        align-items: flex-start;
+    }
 }
 
 .subHeader {
     color: var(--secondary-text);
     font-size: 2rem;
+
+    @include mixins.phone {
+        font-size: 1.125rem;
+    }
 }

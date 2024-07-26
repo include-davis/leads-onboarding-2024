@@ -45,7 +45,9 @@ export default function Day1() {
         <div className={styles.bottomContent}>
           <div className={styles.recentWork}>
             <div className={styles.recentWorkTitleIcon}>
-              <Image src="/pen_icon.png" alt="Pen icon" height="80" width="80"></Image>
+              <div className={styles.iconContainer}>
+                <Image src="/pen_icon.png" alt="Pen icon" fill={true}></Image>
+              </div>
               <h3>Recent Work</h3>
             </div>
             <p className={styles.subHeader}>Transforming ideas into incredible realities is what we do best.</p>
@@ -63,7 +65,9 @@ export default function Day1() {
           </div>
           <div className={styles.ourPillars}>
             <div className={styles.ourPillarsHeader}>
-              <Image src="/greek_pillar.png" alt="Pillar icon" height="80" width="80"></Image>
+              <div className={styles.iconContainer}>
+                <Image src="/greek_pillar.png" alt="Pillar icon" fill={true}></Image>
+              </div>
               <h3>Our Pillars</h3>
               <p className={styles.subHeader}>What inspires us as an org</p>
             </div>

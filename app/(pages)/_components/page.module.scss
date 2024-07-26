@@ -1,7 +1,8 @@
+@use '/app/(pages)/mixins.scss';
+
 .card {
     --frost-background: rgba(255, 255, 255, 0.1);
-    h6 {
-        font-size: 1.5rem;
+    h5 {
         font-weight: 400;
     }
 
@@ -14,18 +15,16 @@
     gap: 20px;
     border-radius: 20px;
     max-width: 524px;
+
+    @include mixins.phone {
+        max-width: none;
+    }
 }
 
 .cardContent {
     display: flex;
     flex-direction: column;
     gap: 32px;
-
-    div {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-    }
 
     hr {
         border: none;
@@ -52,20 +51,48 @@
 .upperContent {
     font-size: 1.125rem;
     color: var(--secondary-text);
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .imageContainer {
-    background-color: lightgray;
     max-height: 300px;
     aspect-ratio: 1.75;
-    border-radius: 8px;
     position: relative;
     
+    @include mixins.phone {
+        max-height: none;
+    }
+}
+
+.workImage {
+    border-radius: 8px;
 }
 
 .lowerContent {
-    font-size: 1.5rem;
-    p {
-        color: var(--secondary-text);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.lowerText {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    * {
+        font-size: 1.5rem;
     }
+
+    @include mixins.phone {
+        * {
+            font-size: 1.125rem;
+        }
+    }
+}
+
+.lowerText p {
+    color: var(--secondary-text);
 }
