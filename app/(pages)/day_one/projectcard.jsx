@@ -1,6 +1,7 @@
 import styles from './include.module.scss'
+import Link from 'next/link';
 
-export function ProjectCard({cohort, image, image_alt, title, description}) {
+export function ProjectCard({cohort, image, image_alt, title, description, url}) {
     return(
         <div className={styles.project_card}>
             <p>{cohort}</p>
@@ -11,7 +12,9 @@ export function ProjectCard({cohort, image, image_alt, title, description}) {
             <p>{title}</p>
             <p>{description}</p>
             <br/>
-            <button className={styles.button}>🟢 VISIT SITE</button>
+            <a href={url}>
+                <button className={styles.button}>🟢 VISIT SITE</button>
+            </a>
         </div>
     );
 }

@@ -10,7 +10,8 @@ const ielc = {
     img: "/images/IELC Tutoring.png",
     img_alt: "IELC Tutoring",
     title: "IELC Tutoring",
-    desc: "Website and brand identity project for the Interactive Elementary Learning Center to boost credibility and increase participation in their free 7-week summer program."
+    desc: "Website and brand identity project for the Interactive Elementary Learning Center to boost credibility and increase participation in their free 7-week summer program.",
+    href: "https://www.ielctutoring.com/"
 }
 
 const bandv = {
@@ -18,7 +19,8 @@ const bandv = {
     img: "/images/Bloom and Vine.png",
     img_alt: "Bloom and Vine",
     title: "Bloom and Vine",
-    desc: "Website project for Bloom and Vine a boutique floral design studio located in Northern California. Bloom and Vine strives to make every event unforgettable."
+    desc: "Website project for Bloom and Vine a boutique floral design studio located in Northern California. Bloom and Vine strives to make every event unforgettable.",
+    href: "https://www.bloomandvine.net"
 }
 
 const nvsi = {
@@ -26,7 +28,8 @@ const nvsi = {
     img: "/images/New Vietnam Studies Initiative.png",
     img_alt: "New Vietnam Studies Initiative",
     title: "New Vietnam Studies Initiative",
-    desc: "We developed the website for NVSI, promoting research and collaboration in fields related to contemporary Vietnam's economic, political, and cultural development."
+    desc: "We developed the website for NVSI, promoting research and collaboration in fields related to contemporary Vietnam's economic, political, and cultural development.",
+    href: "https://newvietnam.ucdavis.edu/"
 }
 
 const oneloop = {
@@ -34,7 +37,8 @@ const oneloop = {
     img: "/images/ONELOOP.png",
     img_alt: "ONELOOP",
     title: "ONELOOP",
-    desc: "Oneloop is a team of graduate and undergraduate students at UCD. They design and build a Hyperloop pod to compete in SpaceX's annual Hyperloop competition."
+    desc: "Oneloop is a team of graduate and undergraduate students at UCD. They design and build a Hyperloop pod to compete in SpaceX's annual Hyperloop competition.",
+    href: "https://davishyperloop.com/"
 }
 
 export function Include() {
@@ -42,6 +46,7 @@ export function Include() {
         <div className={styles.page}>
             <div className={styles.header1}>
                 <h1>Our mission is to design creative digital solutions that have a positive social impact</h1>
+                <br/>
                 <img src={images.figma}/>
             </div>
 
@@ -51,10 +56,10 @@ export function Include() {
                 <h3>Transforming ideas into incredible realities is what we do best.</h3>
             </div>
             <div className={styles.card}>
-                <ProjectCard cohort={ielc.cohort} image={ielc.img} image_alt={ielc.img_alt} title={ielc.title} description={ielc.desc}></ProjectCard>
-                <ProjectCard cohort={bandv.cohort} image={bandv.img} image_alt={bandv.img_alt} title={bandv.title} description={bandv.desc}></ProjectCard>
-                <ProjectCard cohort={nvsi.cohort} image={nvsi.img} image_alt={nvsi.img_alt} title={nvsi.title} description={nvsi.desc}></ProjectCard>
-                <ProjectCard cohort={oneloop.cohort} image={oneloop.img} image_alt={oneloop.img_alt} title={oneloop.title} description={oneloop.desc}></ProjectCard>
+                <ProjectCard cohort={ielc.cohort} image={ielc.img} image_alt={ielc.img_alt} title={ielc.title} description={ielc.desc} url={ielc.href}></ProjectCard>
+                <ProjectCard cohort={bandv.cohort} image={bandv.img} image_alt={bandv.img_alt} title={bandv.title} description={bandv.desc} url={bandv.href}></ProjectCard>
+                <ProjectCard cohort={nvsi.cohort} image={nvsi.img} image_alt={nvsi.img_alt} title={nvsi.title} description={nvsi.desc} url={nvsi.href}></ProjectCard>
+                <ProjectCard cohort={oneloop.cohort} image={oneloop.img} image_alt={oneloop.img_alt} title={oneloop.title} description={oneloop.desc} url={oneloop.href}></ProjectCard>
             </div>
             
 
