@@ -28,7 +28,23 @@ h1,
 h2,
 h3,
 h4,
-h5,
+h5 {
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+}
 h6 {
-  color: var(--text-primary);
+  color: var(--text-color2);
+  font-size: 1.85rem;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 800px) {
+  h5 {
+    font-size: 1.85rem;
+  }
+  
+  h6 {
+    font-size: 1.15rem;
+  }
 }
