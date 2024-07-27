@@ -1,0 +1,27 @@
+@use './mixins.scss';
+
+:root {
+  --include-purple: #3C257E;
+  --gradient-dark: #332950;
+  --secondary-text: #D0D0D0;
+
+  --padding-large: 80px;
+
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--text-primary);
+}
