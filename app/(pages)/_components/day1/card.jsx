@@ -14,8 +14,10 @@ export default function Card({quarter, image, projectName, description, link}) {
                     fill={true}
                     alt={projectName} />
             </div>
-            <h2 className={styles.projectName}>{projectName}</h2>
-            <p className={styles.description}>{description}</p>
+            <div className={styles.projectInfo}>
+                <h2 className={styles.projectName}>{projectName}</h2>
+                <p className={styles.description}>{description}</p>
+            </div>
             <Link href={link} passHref>
                 <button className={styles.visitButton}>VISIT SITE</button>
             </Link>

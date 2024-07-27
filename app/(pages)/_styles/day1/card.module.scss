@@ -1,4 +1,10 @@
+
+
+
 .card {
+    display: flex;
+    flex-direction: column;
+    gap:20px;
     background-color: rgba(255, 255, 255, 0.1);
     width: 583px;
     height: 673px; 
@@ -7,15 +13,26 @@
 }
 
 .quarter {
-    color: var(--color-white);
+    color: var(--color-gray);
+    font-family: var(--font-family-inter);
+    font-weight: 400;
+    font-size: 1.125rem;
 }
+
+
 
 .projectName {
     color: var(--color-white); 
+    font-family: var(--font-family-inter);
+    font-weight: 400;
+    font-size: 1.5rem;
 }
 
 .description {
     color: var(--color-gray);
+    font-family: var(--font-family-inter);
+    font-weight: 400;
+    font-size: 1.5rem;
 }
 
 .imgContainer {
@@ -23,4 +40,24 @@
     width: 523px;
     height: 300px;
     
+}
+
+.projectInfo {
+    border-top: 0.5px solid var(--color-white);
+    padding-top: 16px;
+    gap: 8px;
+}
+
+.visitButton {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-white); 
+    border: none; 
+    font-family: var(--font-family-inter);
+    font-weight: 400;
+    font-size: 1.125rem;
+    width: 100%;
+    height: 62px;
+    border-radius: 32px;
+
+
 }

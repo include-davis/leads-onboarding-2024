@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Card from "../_components/day1/card";
 import styles from "../_styles/day1/page.module.scss";
+import { BiSolidPen } from "react-icons/bi";
+
 
 
 const projects = [
@@ -45,25 +47,40 @@ const projects = [
 export default function Day1() {
   return (
     <div className={styles.main_container}>
-      <div className={styles.recent_work_container}>
-        <h2>Recent Work</h2>
-        <h3>Transforming ideas into incredible realities is what we do best.</h3>
+      <div className={styles.white_top}></div>
+      <div className={styles.top_container}>
+        <h1> Our mission is to design creative digital solutions that have a positive social impact</h1>
+        <div className={styles.imgContainer}>
+          <Image 
+            src={"/images/day1/design.png"}
+            style={{ objectFit: "fill" }}
+            fill={true}
+            alt={"Example Figma file design"} />
+        </div>
       </div>
-      <div className={styles.cards}>
-        {projects.map((project, index) => (
-          <Card
-            key={index}
-            quarter={project.quarter}
-            image={project.image}
-            projectName={project.projectName}
-            description={project.description}
-            link={project.link}
-          />
-        ))}
+      <div className={styles.bottom_container}>
+        <div className={styles.recent_work_container}>
+          <BiSolidPen className={styles.penIcon}/>
+          <h2>Recent Work</h2>
+          <h3>Transforming ideas into incredible realities is what we do best.</h3>
+        </div>
+        <div className={styles.cards}>
+          {projects.map((project, index) => (
+            <Card
+              key={index}
+              quarter={project.quarter}
+              image={project.image}
+              projectName={project.projectName}
+              description={project.description}
+              link={project.link}
+            />
+          ))}
+        </div>
+        <p className={styles.and_more_container}>
+          AND MORE... 
+        </p>
       </div>
-      <p className={styles.and_more_container}>
-        AND MORE... 
-      </p>
+      
     </div>
   );
 }
