@@ -7,6 +7,7 @@ export default function Home() {
       <div className={styles.body}>
         <ul>
           <li><a href="/day1" className={styles.listLink}>day 1</a></li>
+          <li><a href="/day2" className={styles.listLink}>day 2</a></li>
         </ul>
       </div>
     </main>
