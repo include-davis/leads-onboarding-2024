@@ -1,6 +1,7 @@
 import Image from "next/image";
 import styles from "./page.module.scss";
 import { FaPenNib } from "react-icons/fa";
+import Cards from "@/app/(pages)/_components/cards";
 
 export default function Page() {
   return (
@@ -17,7 +18,7 @@ export default function Page() {
             <h5 style={{marginBottom: "30px", marginTop: "20px"}}>Recent Work</h5>
             <h6>Transforming ideas into incredible realities is what we do best.</h6>
           </div>
-          <div>cards</div>
+          <Cards />
         </div>
       </div>
     </main>
