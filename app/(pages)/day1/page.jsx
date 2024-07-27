@@ -53,7 +53,7 @@ export default function Day1() {
         <div className={styles.imgContainer}>
           <Image 
             src={"/images/day1/design.png"}
-            style={{ objectFit: "fill" }}
+            style={{ objectFit: "cover" }}
             fill={true}
             alt={"Example Figma file design"} />
         </div>
