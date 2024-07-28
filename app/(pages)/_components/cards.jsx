@@ -5,7 +5,8 @@ function Card(card_img, site_link, school_term, org_name, description, bg_color)
         <div className={styles.div_card}>
             <h4>{school_term}</h4>
             <div className={styles.div_card_logo} style={{backgroundColor: bg_color}}>{card_img}</div>
-            <p>{description}</p>
+            <p>{org_name}</p>
+            <p style={{color: "gray"}}>{description}</p>
         </div>
     )
 }
