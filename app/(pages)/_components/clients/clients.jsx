@@ -1,15 +1,28 @@
 import React from 'react';
 import Image from 'next/image';
+import styles from '@/app/(pages)/_styles/components/clientCards.module.scss'
 
 export default function ClientCard({ client }) {
     return (
-        <div>
+        <div className={styles.container}>
             <div>{client.season}</div>
-            <Image src={client.image} alt={client.name} width={528} height={304}/>
+            <div className={styles.image_container}>
+                <Image 
+                    src={client.image} 
+                    alt={client.name}
+                    style={{ objectFit: "contain" }}
+                    fill={true}
+                    priority={true}
+                />
+            </div>
+            
             <hr/>
-            <p>{client.name}</p>
+            <p className={styles.client_name}>{client.name}</p>
             <p>{client.text}</p>
-            <a href="">VISIT SITE</a>
+            <a href="" className={styles.visit_button}>
+                <div>VISIT SITE</div>
+            </a> 
+            
         </div>
     );
 }
