@@ -4,6 +4,7 @@ import { React, useState }from 'react';
 import Image from 'next/image';
 import ClientCard from '@/app/(pages)/_components/clients/clients';
 import { PiPenNib } from "react-icons/pi";
+import { BiSolidPen } from "react-icons/bi";
 import styles from '@/app/(pages)/_styles/pages/day1/home.module.scss'
 
 export default function Home() {
@@ -53,7 +54,7 @@ export default function Home() {
               </div> 
             </div>
               <div className={styles.work_container}>
-                  <PiPenNib />
+                  <BiSolidPen />
                   <h1>Recent Work</h1>
                   <p>Transforming ideas into incredible realities is what we do best.</p>
               </div>
