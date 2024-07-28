@@ -1,10 +1,9 @@
 "use client";
 
-import React from 'react';
+import { React, useState }from 'react';
 import Image from 'next/image';
 import ClientCard from '@/app/(pages)/_components/clients/clients';
 import { PiPenNib } from "react-icons/pi";
-import { useState } from 'react';
 import styles from '@/app/(pages)/_styles/pages/day1/home.module.scss'
 
 export default function Home() {
@@ -37,28 +36,33 @@ export default function Home() {
       ]);
 
     return (
-        <div className={styles.container}>
+        <div>
+          <div className={styles.white_bg}>
             <div className={styles.mission}>
-                <p>Our mission is to design creative digital solutions that have a positive social impact</p>
-                <div className={styles.image_container}>
-                    <Image 
-                        src='/new_design.png' 
-                        alt="New Design"
-                        style={{ objectFit: "contain" }}
-                        fill={true}
-                        priority={true}
-                    />
-                </div>
-            </div>
-            <div className={styles.work_container}>
-                <PiPenNib className={styles.work}/>
-                <h1 className={styles.work}>Recent Work</h1>
-                <p className={styles.work}>Transforming ideas into incredible realities is what we do best.</p>
+              <h1>
+                Our mission is to design creative digital solutions that have a positive social impact
+              </h1>
             </div>
 
-            <div className={styles.cards}>
-                {clients.map((client, key) => <ClientCard key={key} client={client}/>)}
+          </div>
+
+          <div className={styles.purple_bg}>
+            <div>
+              <div className={styles.image_container}>
+                <img alt='new_design' src='/new_design.png'/>
+              </div> 
             </div>
+              <div className={styles.work_container}>
+                  <PiPenNib />
+                  <h1>Recent Work</h1>
+                  <p>Transforming ideas into incredible realities is what we do best.</p>
+              </div>
+
+              <div className={styles.cards}>
+                  {clients.map((client, key) => <ClientCard key={key} client={client}/>)}
+              </div>
+          </div>
         </div>
+        
     );
 }

@@ -1,5 +1,17 @@
-@mixin example {
-    @media screen and (max-width: 800px) {
-        @content
+@mixin sm-desktop {
+    @media screen and (max-width: 1280px) {
+      @content;
     }
-}
+  }
+  
+  @mixin tablet {
+    @media screen and (max-width: 1048px) {
+      @content;
+    }
+  }
+  
+  @mixin phone {
+    @media screen and (max-width: 720px) {
+      @content;
+    }
+  }

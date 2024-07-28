@@ -1,29 +1,72 @@
-.container {
+.white_bg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding-top: 100px;
+}
+
+.purple_bg {
     background: var(--purple-gradient);
     background-color: var(--include-purple);
 
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    padding-bottom: 100px;
+
 }
 
 .mission {
-    width: 65%;
-    font-size: 3.8rem;
+    width: 60%;
+    font-size: 2rem;
     text-align: center;
-    gap: 32px;
+
+    font-weight: 700;
+    line-height: 1.25;
+    padding-bottom: 250px;
+
 }
 
 .image_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    // border: solid red 1px;
+    
     position: relative;
-    width: 306px;
-    height: 306px;
-    overflow: hidden;
-    border-radius: 32px;
+    
+    img {
+        width: 100%;
+        max-width: 900px;
+        aspect-ratio: 2;
+        object-fit: cover;
+        transform: translateY(-50%);
+        border-radius: 24px;
+    }
+
+    // margin-bottom: -10px;
+
 }
 
-.work {
-    color: var(--text-white)
+.work_container {
+    color: var(--text-white);
+    text-align: center;
+
+    font-size: 2rem;
+    
+    h1 {
+        font-size: 3.25rem;
+        padding-top: 16px;
+    }
+
+    p {
+        font-size: 1.75rem;
+        color: var(--text-grey);
+        padding: 40px 0px;
+    }
 }
 
 .cards {

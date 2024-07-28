@@ -1,42 +1,67 @@
-.container {
+.card {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: space-around;
 
-    width: 583px;
     color: var(--text-grey);
     background-color: var(--grey-background-card);
-    gap: 2%;
-    padding: 8px 0px;
-    border-radius: 16px;
+    padding: 30px;
+    border-radius: 24px;
+    
+    box-sizing: border-box;
+    background: hsla(0,0%,100%,.1);
+    width: calc(50% - 16px);
+    height: 700px;
+    row-gap: 16px;
 
     p {
-        width: 90%;
-        gap: 1%;
+        font-size: 1.5rem;
     }
+
+    // border: 1px red solid
 }
 
 .image_container {
     position: relative;
-    width: 523px;
-    height: 348px;
+    width: 100%;
+    height: 50%;
     overflow: hidden;
     border-radius: 8px;
-    border: 1px red solid
+    margin: 8px 0px;
+    // border: 1px red solid
+}
+
+.text {
+    // border: 1px red solid;
+    line-height: 1.2;
+    height: 25%;
+}
+
+.client_name {
+    color: var(--text-white);
+    padding-bottom: 16px;
 }
 
 .visit_button {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 90%;
-    height: 40px;
-    border: red solid 1px;
+    gap: 1%;
+    width: 100%;
+    padding: 24px 0px;
+
     border-radius: 36px;
     text-decoration: none;
-    color: var(--text-white)
+    color: var(--text-white);
+    background: hsla(0,0%,100%,.1);
 }
 
-.client_name {
-    color: var(--text-white)
+.visit_button:hover {
+    background: hsla(0, 0%, 100%, 0.148);
 }
+
+.dot {
+    color: #0acf83;
+}
+
+
