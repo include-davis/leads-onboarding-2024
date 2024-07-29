@@ -4,15 +4,21 @@
     justify-content: space-between;
     align-items: center;
     padding: 6rem;
-    min-height: 100vh;
   }
+
+.header {
+  width: 70%;
+  text-align: center;
+  margin-top: 130px;
+}
 
 .div_purple {
   width: 100%;
-  background-color: purple;
+  background-image: linear-gradient(to right, #24154f , #362073, #362073, #362073, #24154f);
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 230px;
 }
 
 .div_design_home {
@@ -26,7 +32,7 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  margin-bottom: 60px;
+  margin-bottom: 10px;
 }
 
 .img_design_home {
@@ -42,6 +48,14 @@
 }
 
 @media screen and (max-width: 800px) {
+  .div_purple {
+    margin-top: 100px;
+  }
+
+  .header {
+    font-size: 2.875rem;
+  }
+
   .div_design_home {
     width: 90%;
     aspect-ratio: 1 / 1;

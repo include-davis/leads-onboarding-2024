@@ -6,7 +6,7 @@ import Cards from "@/app/(pages)/_components/cards";
 export default function Page() {
   return (
     <main className={styles.main}>
-      <h>Our mission is to design creative digital solutions that have a positive social impact</h>
+      <h1 className={styles.header}>Our mission is to design creative digital solutions that have a positive social impact</h1>
       <div>
         <div className={styles.div_purple}>
           <div className={styles.div_design_home}>
@@ -19,6 +19,7 @@ export default function Page() {
             <h6>Transforming ideas into incredible realities is what we do best.</h6>
           </div>
           <Cards />
+          <h4 style={{marginBottom: "50px"}}>AND MORE...</h4>
         </div>
       </div>
     </main>
