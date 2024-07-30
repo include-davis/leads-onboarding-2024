@@ -16,16 +16,16 @@ export default function Home() {
             text: "Website and brand identity project for the Interactive Elementary Learning Center to boost credibility and increase participation in their free 7-week summer program."
         },
         {
+          name: 'Bloom and Vine',
+          season: 'FALL/WINTER 2023',
+          image: '/bloom_and_vine.png',
+          text: "Website project for Bloom and Vine a boutique floral design studio located in Northern California. Bloom and Vine strives to make every event unforgettable."
+        },
+        {
             name: 'New Vietnam Studies Initiative',
             season: 'WINTER/SPRING 2022',
             image: '/new_vietnam_studies_initiative.png',
             text: "We developed the website for NVSI, promoting research and collaboration in fields related to contemporary Vietnam's economic, political, and cultural development."
-        },
-        {
-            name: 'Bloom and Vine',
-            season: 'FALL/WINTER 2023',
-            image: '/bloom_and_vine.png',
-            text: "Website project for Bloom and Vine a boutique floral design studio located in Northern California. Bloom and Vine strives to make every event unforgettable."
         },
         {
             name: 'ONELOOP',
@@ -50,7 +50,8 @@ export default function Home() {
           <div className={styles.purple_bg}>
             <div>
               <div className={styles.image_container}>
-                <img alt='new_design' src='/new_design.png'/>
+                <img className={styles.img} alt='new_design' src='/new_design.png'/>
+                <img className={styles.img_small} alt='new_design' src='/new_design_small.png'/>
               </div> 
             </div>
               <div className={styles.work_container}>

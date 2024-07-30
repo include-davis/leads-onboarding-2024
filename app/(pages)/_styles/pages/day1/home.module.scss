@@ -1,3 +1,5 @@
+@use 'app/(pages)/mixins';
+
 .white_bg {
     display: flex;
     flex-direction: column;
@@ -20,12 +22,17 @@
 
 .mission {
     width: 60%;
-    font-size: 2rem;
+    font-size: 1.8rem;
     text-align: center;
 
     font-weight: 700;
     line-height: 1.25;
     padding-bottom: 250px;
+
+    @include mixins.phone {
+        font-size: 1.5rem;
+        padding-bottom: 350px;
+    }
 
 }
 
@@ -47,14 +54,31 @@
         border-radius: 24px;
     }
 
-    // margin-bottom: -10px;
+    @include mixins.phone {
+        img {
+            aspect-ratio: unset;
+        }
+    }
+}
 
+.img {
+    @include mixins.phone {
+        display: none;
+    }
+}
+
+.img_small {
+    display: none;
+
+    @include mixins.phone {
+        display: block;
+    }
 }
 
 .work_container {
     color: var(--text-white);
     text-align: center;
-
+    width: 90%;
     font-size: 2rem;
     
     h1 {
@@ -77,5 +101,11 @@
     margin: auto;
     flex-wrap: wrap;
     gap: 32px;
+
+    @include mixins.phone {
+        align-items: center;
+        flex-direction: column;
+        // border: 1px red solid;
+    }
 }
 
