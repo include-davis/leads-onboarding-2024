@@ -45,9 +45,10 @@ export default function Page() {
     return (
         <main className={styles.main}>
             <div className={styles.container}>
+                <h4 style={{width: "100%", textAlign: "left", marginBottom: "10px", color: "purple"}}>Password:</h4>
                 { freeze && <ErrorBox /> }
-                <div >
-                    <input className={styles.input_bar}></input>
+                <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+                    <input type="text" className={styles.input_bar}></input>
                     <button className={[styles.submit, freeze ? styles.submit_disabled : styles.submit_clickable].join(" ")} onClick={()=>{onClickHandler()}} disabled={freeze}>Submit</button>    
                 </div>
             </div>  

@@ -7,7 +7,7 @@ export default function Page() {
   return (
     <main className={styles.main}>
       <h1 className={styles.header}>Our mission is to design creative digital solutions that have a positive social impact</h1>
-      <div>
+      <div style={{width: "100%"}}>
         <div className={styles.div_purple}>
           <div className={styles.div_design_home}>
             <img src="/design-home.png" className={styles.img_design_home}
