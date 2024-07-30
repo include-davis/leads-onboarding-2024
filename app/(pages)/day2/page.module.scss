@@ -7,72 +7,7 @@
     //background-color: rgb(248, 248, 248);
 }
 
-.container {
+.header {
     position: relative;
-    padding-top: 200px;
-    padding-bottom: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-
-    background-color: rgba(124, 46, 192, 0.1);
-}
-
-.input_bar {
-    width: 400px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
-
-    background-color: transparent;
-    border-radius: 40px;
-    font-size: 2rem;
-    font-family: "Lucida Console", "Courier New", monospace;
-    border-color: purple;
-}
-
-.submit {
-    width: 150px;
-    height: 40px;
-    margin-left: 10px;
-
-    font-size: 1rem;
-    border: 0;
-    border-radius: 20px;
-    color: purple;
-}
-
-.submit_disabled {
-    background-color: gainsboro;
-    color: gray;
-}
-
-.submit_clickable {
-    background-color: white;
-}
-
-.submit_clickable:active {
-    background-color: gray;
-    color: thistle;
-}
-
-.err_box {
-    position: absolute;
-    width: 200px;
-    bottom: 110px;
-    right: 30px;
-    background-color: thistle;
-}
-
-.error {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    height: 200px;
 }
