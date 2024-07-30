@@ -1,9 +1,4 @@
-// import Styles from '@/(pages)/_styles/days/day1.module.scss';
-// import styles from "../_styles/days/page.module.scss";
-
 import styles from '../_styles/days/day1.module.scss';
-
-// import styles from '../_styles/days/day1.module.scss';
 
 export default function Day1(){
     return(
@@ -14,7 +9,7 @@ export default function Day1(){
               <p>Transforming ideas into incredible realities is what we do best.</p>
 
               <div className={styles.cardcontainer}>
-
+                <span class="card_dot">●</span>
               </div>
           </div>
         </div>

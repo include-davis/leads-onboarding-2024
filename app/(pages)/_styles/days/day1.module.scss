@@ -19,3 +19,56 @@
         color: #d0d0d0;
     }
 }
+
+.card {
+    box-sizing: border-box;
+    background: hsla(0, 0%, 100%, .1);
+    border-radius: 20px;
+    padding: 30px;
+    width: calc(50% - 16px);
+    height: auto;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+
+
+    .card_date {
+        font-size: 18px;
+        color: var(--text-grey);
+    }
+
+    .card_img {
+        font-size: 18px;
+    }
+
+    .card_name {
+        color: white;
+        font-size: 24px;
+        font-weight: 400;
+        margin-top: 16px;
+    }
+
+    .card_description {
+        font-style: normal;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+    .card_button {
+        width: 100%;
+        color: var(--text-white);
+        background: hsla(0, 0%, 100%, .1);
+        border-color: transparent;
+        border-radius: 100px;
+        font-size: 18px;
+        padding: 20px 40px;
+        margin-top: auto;
+        cursor: pointer;
+    }
+
+    .card_dot {
+        color: #0acf83;
+    }
+}
+
