@@ -1,4 +1,6 @@
-import styles from "@/(pages)/_styles/day1.module.scss";
+// import styles from './app/(pages)/_styles/days/day1.module.scss';
+
+import styles from '@/app/(pages)/_styles/days/day1.module.scss';
 
 export default function Card({quarter, image, projectName, description, link}) {
     return (
