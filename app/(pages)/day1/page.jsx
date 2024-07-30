@@ -1,4 +1,4 @@
-import styles from '@/(pages)/_styles/days/day1.module.scss';
+import Styles from '@/(pages)/_styles/days/day1.module.scss';
 
 // import styles from '../_styles/days/day1.module.scss';
 
