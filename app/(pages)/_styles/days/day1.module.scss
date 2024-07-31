@@ -22,17 +22,17 @@
 
 .cardcontainer {
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-column-gap: 32px; /* space between columns, change as needed */
-    grid-row-gap: 32px; /* space between rows, change as needed */
-/*     max-width: 1200px;
+    display: flex;
+    align-items: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1200px;
     width: 100%;
     margin: auto;
     flex-wrap: wrap;
     display: flex;
     flex-direction: row;
-    gap: 32px; */
+    gap: 32px; 
 }
 
 .card {
@@ -40,7 +40,6 @@
     color: white;
     background-color: #5e498c;
     margin: 25px;
-    width: auto;
     padding: 25px;
     border-radius: 20px;
     @media screen and (max-width: 720px) {
