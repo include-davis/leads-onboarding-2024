@@ -20,7 +20,7 @@ const card_content = {
   },
   nvsi: {
       cohort: "WINTER/SPRING 2022",
-      img: "/images/New Vietnam Studies Initiative.png",
+      img: "public/New Vietnam Studies Initiative.png",
       img_alt: "New Vietnam Studies Initiative",
       title: "New Vietnam Studies Initiative",
       desc: "We developed the website for NVSI, promoting research and collaboration in fields related to contemporary Vietnam's economic, political, and cultural development.",
@@ -28,7 +28,7 @@ const card_content = {
   },
   oneloop: {
       cohort: "FALL/WINTER 2021",
-      img: "/images/ONELOOP.png",
+      img: "ONELOOP.png",
       img_alt: "ONELOOP",
       title: "ONELOOP",
       desc: "Oneloop is a team of graduate and undergraduate students at UCD. They design and build a Hyperloop pod to compete in SpaceX's annual Hyperloop competition.",
@@ -47,9 +47,9 @@ export default function Day1(){
               <div className={styles.cardcontainer}>
 
               <div className={styles.cardcontainer}>
-                {card_content.map((obj, index) => (
+                {Object.values(card_content).map((obj, index) => (
                   <div className={styles.card} key={index}>
-                    <ProjectCard
+                    <Card
                       cohort={obj.cohort}
                       image={obj.img}
                       image_alt={obj.img_alt}

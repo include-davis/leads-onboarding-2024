@@ -1,6 +1,5 @@
-// import styles from './app/(pages)/_styles/days/day1.module.scss';
-
-import styles from '@/app/(pages)/_styles/days/day1.module.scss';
+import React from 'react'
+import styles from '../../_styles/days/day1.module.scss';
 
 export default function Card({quarter, image, projectName, description, link}) {
     return (
