@@ -1,9 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { React, useState }from 'react';
-import Image from 'next/image';
 import ClientCard from '@/app/(pages)/_components/clients/clients';
-import { PiPenNib } from "react-icons/pi";
 import { BiSolidPen } from "react-icons/bi";
 import styles from '@/app/(pages)/_styles/pages/day1/home.module.scss'
 

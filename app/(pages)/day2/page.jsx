@@ -1,9 +1,10 @@
 "use client"
 
 import React, { createContext, useContext, useState } from 'react';
-import PinForm from '../_components/pin';
+import PinForm from '@/app/(pages)/_components/pin';
 import styles from '@/app/(pages)/_styles/pages/day2/home.module.scss';
-import ThemeSelector from '../_components/select';
+import ThemeSelector from '@/app/(pages)/_components/select';
+import Carousel from '@/app/(pages)/_components/carousel';
 
 export const themeOptions = [
   {value: "", text: "-- Select Theme --"},
@@ -27,6 +28,7 @@ export default function Home() {
           <ThemeSelector/>
           <PinForm className={styles.pin}/>
         </div>
+        <Carousel />
       </div>
     </ThemeContext.Provider>
   );

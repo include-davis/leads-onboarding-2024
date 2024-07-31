@@ -1,12 +1,13 @@
 .container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 
-    height: 100%;
-    min-height: 600px;
-    // border: 1px red solid;
+    gap: 50px;
+
+    padding: 50px;
+    // border: 1px blue solid; 
 }
 
 .content {
@@ -16,5 +17,5 @@
     align-items: center;
 
     min-height: 180px;
-    // border: red 1px solid
+    // border: 1px green solid;
 }
