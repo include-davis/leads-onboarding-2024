@@ -40,11 +40,12 @@ export default function Day1(){
     return(
         <div className={styles.pagewrapper}>
           <div className={styles.workcontainer}>
-              <img src="pen.png"/>
-              <h1>Recent Work</h1>
-              <p>Transforming ideas into incredible realities is what we do best.</p>
+            <img src="pen.png"/>
+            <h1>Recent Work</h1>
+            <p>Transforming ideas into incredible realities is what we do best.</p>
+          </div>
 
-              <div className={styles.cardcontainer}>
+          <div className={styles.cardcontainer}>
 
               <div className={styles.cardcontainer}>
                 {Object.values(card_content).map((obj, index) => (
@@ -62,7 +63,7 @@ export default function Day1(){
 
               </div>
               </div>
-          </div>
+          
         </div>
     )
 }
