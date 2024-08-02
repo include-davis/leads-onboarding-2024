@@ -1,0 +1,84 @@
+.main {
+    position: relative;
+    height: 100vh;
+    background-color: #2278d3;
+    padding: 128px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.notification {
+    position: absolute;
+    top: 8px;
+
+    padding: 16px;
+    background-color: rgb(220, 241, 245);
+    border-radius: 32px;
+    box-shadow: 0 10px 10px rgba(0,0,0,0.1);
+
+    animation: floatIn 1s forwards;
+}
+
+@keyframes floatIn {
+    from {
+      opacity: 0;
+      transform: translateY(0%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(100%);
+    }
+  }
+
+.container {
+    width: fit-content;
+    height: fit-content;
+    background-color:rgb(220, 241, 245);
+    
+    padding: 64px;
+    margin: auto;
+
+    border-radius: 32px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+
+    >input {
+        border-radius: 32px;
+        height: 32px;
+    }
+
+    >button {
+        padding: 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 16px;
+        cursor: pointer;
+        background-color: #0e65c2;
+        color: white;
+        transition: background-color 0.3s;
+    }
+    
+    >button:hover:not(:disabled) {
+        background-color: #09396b;
+    }
+    
+    >button:disabled {
+        background-color: grey;
+        cursor: not-allowed;
+    }
+}
+
+.active, .disabled {
+    background-color: aqua;
+    padding: 16px;
+    border-radius: 32px;
+}
+
+.disabled{
+    background-color: azure;
+}
