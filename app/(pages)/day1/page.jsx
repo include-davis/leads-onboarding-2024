@@ -49,7 +49,7 @@ export default function Day1(){
 
               <div className={styles.cardcontainer}>
                 {Object.values(card_content).map((obj, index) => (
-                  <div className={styles.card} key={index}>
+                  <div className={styles.cardinfo} key={index}>
                     <Card
                       cohort={obj.cohort}
                       image={obj.img}
