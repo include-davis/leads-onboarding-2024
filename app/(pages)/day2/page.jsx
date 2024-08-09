@@ -17,9 +17,9 @@ export default function Day2() {
 
     return (
       <div className={styles.main_container}>
-        <div className={styles.title}>
+        <h1 className={styles.title}>
           Carousel
-        </div>
+        </h1>
         <div className={styles.window_container}>
           <button className={styles.arrow} onClick={subtractIndex}>
             <RxArrowLeft/>

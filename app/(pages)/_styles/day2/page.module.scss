@@ -5,11 +5,11 @@
     flex-direction: column;
     align-items: center;
     gap: 48px;
-    background-color: var(--color-gray);
+    background-color: var(--color-light-gray);
 }
 
 .title {
-    color: black;
+    color: var(--color-black);
 }
 
 .window_container {
@@ -27,14 +27,14 @@
 .arrow {
     height: 48px;
     aspect-ratio: 1;
-    background-color: gray;
+    background-color: var(--color-blue);
     border-radius: 24px;
     border: none;
     flex-grow: 0;
 
     text-align: center;
     font-size: 1.6rem;
-    color: black;
+    color: var(--color-light-gray);
 
     display: flex;
     align-items: center;
@@ -64,7 +64,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #000;
+    //border: 2px solid #000;
+    background-color: var(--color-white);
     border-radius: 32px;
     transition: transform 0.3s ease;
    
@@ -83,10 +84,11 @@
 .dot {
     width: 16px;
     aspect-ratio: 1;
-    border-radius: 8px;
-    background-color: blue;
+    border-radius: 50%;
+    background-color: var(--color-light-gray);
+    border: 1px solid var(--color-blue);
 }
 
 .dot.active {
-    background-color: green;
+    background-color: var(--color-blue);
 }
