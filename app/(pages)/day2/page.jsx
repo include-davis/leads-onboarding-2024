@@ -2,49 +2,64 @@
 import Image from "next/image";
 import styles from "../_styles/day2/page.module.scss";
 import { useState, useEffect, useRef, useContext} from 'react';
+import { RxArrowLeft, RxArrowRight } from 'react-icons/rx'
 
 export default function Day2() {
-    
-    const [password, setPassword] = useState('');
-    const [counter, setCounter] = useState(0);
-    //const counter = useRef(0);
+    const data = ['Frame 1', 'Frame 2', 'Frame 3', 'Frame 4'];
+    const [activeIndex, setActiveIndex] = useState(0)
+    const subtractIndex = () => {
+      setActiveIndex((activeIndex + data.length - 1) % data.length)
+    }
 
-    const updatePassword = (e) => {
-        setPassword(e.target.value);
-    };
-    
-    const incrementCounter = () => {
-        setCounter(counter+1);
-    };
-
-   /*  const incrementCounter = () => {
-        counter.current += 1; 
-    } */
+    const addIndex = () => {
+      setActiveIndex((activeIndex + 1) % data.length)
+    }
 
     return (
       <div className={styles.main_container}>
-        {counter == 0 && 
-            (<label>
-                Enter password: <input value={password} onChange={updatePassword}/>
-            </label>)
-        }
-        {counter == 1 && 
-            (<label>
-                Enter password again (2 tries left): <input value={password} onChange={updatePassword}/>
-            </label>)
-        }
-        {counter == 2 && 
-            (<label>
-                Enter password again (final attempt): <input value={password} onChange={updatePassword}/>
-            </label>)
-        }
-
-        {counter < 3 ?
-            (<button onClick={incrementCounter}>Next</button>) : (<button disabled>Next</button>)
-        }
-
-
-        
+        <div className={styles.title}>
+          Carousel
+        </div>
+        <div className={styles.window_container}>
+          <button className={styles.arrow} onClick={subtractIndex}>
+            <RxArrowLeft/>
+          </button>
+          <div className={styles.viewport}>
+            <div 
+              className={styles.content_belt}
+              style={{transform: `translateX(calc(${-activeIndex} * 100%))`}}
+              >
+              {data.map((frame, index) => {
+                            return (
+                                <div 
+                                    key={index} 
+                                    className={styles.frame} 
+                                    style={{ transform: (Math.abs(index - activeIndex) === 1 ||
+                                      (index === 0 && activeIndex === data.length - 1) ||
+                                      (index === data.length - 1 && activeIndex === 0)) ? 'scale(0.8)' : 'scale(1)' }}
+                                >
+                                    <h1 className={styles.frame_content}>{frame}</h1>
+                                </div>
+                            );
+                        })}
+            </div>
+          </div>
+          <button className={styles.arrow} onClick={addIndex}>
+            <RxArrowRight/>
+          </button>
+        </div>
+        <div className={styles.dots}>
+          { data.map((frame, index) => {
+              return (
+                <div 
+                  key={index} 
+                  className={`${styles.dot} ${activeIndex === index ? styles.active: null}`}
+                  onClick={() => setActiveIndex(index)}
+                ></div>
+              )
+            }) 
+          }
+        </div>
       </div>
-    )
-}
+    );
+  }
