@@ -7,6 +7,8 @@ import { RxArrowLeft, RxArrowRight } from 'react-icons/rx'
 export default function Day2() {
     const data = ['Frame 1', 'Frame 2', 'Frame 3', 'Frame 4'];
     const [activeIndex, setActiveIndex] = useState(0)
+    const [darkMode, setDarkMode] = useState(false); 
+
     const subtractIndex = () => {
       setActiveIndex((activeIndex + data.length - 1) % data.length)
     }
@@ -15,11 +17,17 @@ export default function Day2() {
       setActiveIndex((activeIndex + 1) % data.length)
     }
 
+    const changeTheme = () => {
+      setDarkMode(!darkMode);
+      document.body.classList.toggle('dark-mode', !darkMode);
+    };
+
     return (
       <div className={styles.main_container}>
-        <h1 className={styles.title}>
-          Carousel
-        </h1>
+        <h1 className={styles.title}> Carousel </h1>
+        <button className={styles.toggle_button} onClick={changeTheme}>
+                {darkMode ? 'Light Mode' : 'Dark Mode'}
+        </button>
         <div className={styles.window_container}>
           <button className={styles.arrow} onClick={subtractIndex}>
             <RxArrowLeft/>

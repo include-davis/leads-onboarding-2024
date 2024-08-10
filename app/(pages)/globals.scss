@@ -11,19 +11,24 @@
   --navbar-height: 80px;
 
   //colors 
-  --color-white: #FFFFFF; 
   --color-gray: #D0D0D0; 
   --color-purple: #3C257E; 
   --color-gradient-purple: #372860; 
+
   --color-light-gray: #E8E8E8;
+  --color-white: #FFFFFF; 
   --color-black: #000000;
   --color-blue: #2B65F5;
 
-
-
   //fonts 
   --font-family-inter: "Inter", sans-serif;
+}
 
+.dark-mode {
+  --color-light-gray: #000000;
+  --color-white: #2B2B2F; 
+  --color-black: #FFFFFF;
+  --color-blue: #ED6D5D;
 }
 
 @media screen and (max-width: 800px) {
