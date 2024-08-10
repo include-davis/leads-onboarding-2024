@@ -2,10 +2,35 @@
     background-color: white;
     color: black;
     padding: 10%;
+    margin: auto;
     h1 {
         font-weight: bold;
         font-size: 2rem;
         color: black;
         text-align: center;
+    }
+    .carousel {
+        margin: auto;
+        padding: 15%;
+        background-color: pink;
+        align-items: center;
+        display: flex;
+        text-align: center;
+    }
+    button {
+        background-color: black;
+        display: inline-block;
+        border-radius: 50px;
+        text-align: center;
+        align-items: center;
+        padding: 20px;
+    }
+    button:hover {
+        background-color: pink;
+        cursor: pointer;
+    }
+    img {
+        text-align: center;
+        align-items: center;
     }
 }

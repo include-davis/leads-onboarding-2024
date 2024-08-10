@@ -1,3 +1,4 @@
+/* "use client";
 import { useState } from "react";
 
 const slideStyles = {
@@ -92,4 +93,4 @@ const ImageSlider = ({ IMAGES }) => {
   );
 };
 
-export default ImageSlider;
+export default ImageSlider; */

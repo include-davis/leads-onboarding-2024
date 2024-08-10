@@ -1,3 +1,4 @@
+"use client";
 import { useState } from "react"
 import {ArrowBigLeft, ArrowBigRight} from "lucide-react"
 
