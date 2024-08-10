@@ -1,6 +1,6 @@
-import styles from "./page.module.scss";
+import styles from "../_styles/day1.module.scss";
 import Image from "next/image";
-import WorkCard from "../_components/work_card";
+import WorkCard from "../_components/day1/work_card";
 
 const ielcCard = {
   image: "/ielc.png", 

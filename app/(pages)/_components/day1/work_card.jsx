@@ -1,4 +1,4 @@
-import styles from "./page.module.scss";
+import styles from "../../_styles/work_card.module.scss";
 import Image from "next/image";
 
 export default function WorkCard({content}) {

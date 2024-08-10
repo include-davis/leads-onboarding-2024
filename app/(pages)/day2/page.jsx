@@ -4,7 +4,7 @@
 // lock you out after 3 attempts with notification
 // use context: 2 languages: language switcher on top right / left
 import { useState } from "react";
-import styles from "./page.module.scss";
+import styles from "../_styles/day2.module.scss";
 
 
 export default function Day2 () {
