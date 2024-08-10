@@ -27,7 +27,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-  ],
+, "app/(pages)/_components/day2/ImageSlider.tsx"  ],
   "exclude": [
     "node_modules"
   ]
