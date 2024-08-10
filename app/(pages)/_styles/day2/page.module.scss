@@ -1,15 +1,59 @@
+@use 'app/(pages)/mixins.scss';
+
 .main_container {
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 48px;
+    gap: 32px;
     background-color: var(--color-light-gray);
 }
 
 .title {
     color: var(--color-black);
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 16px;
+}
+  
+.light_mode_button, .dark_mode_button {
+    background-color: var(--color-white);
+    border: none;
+    color: var(--color-black); 
+    font-size: 1.5rem; 
+    width: 56px;
+    height: 48px;
+    padding-top: 4px; //icon looks uneven without top padding
+}
+
+.light_mode_button {
+    border-top-left-radius: 25%; 
+    border-bottom-left-radius: 25%;
+}
+
+.dark_mode_button {
+    border-top-right-radius: 25%; 
+    border-bottom-right-radius: 25%; 
+}
+
+.light_mode_button:hover, .dark_mode_button:hover {
+    color: var(--color-blue);
+}
+
+.light_mode_button.active {
+    background-color: var(--color-blue);
+    color: var(--color-white);
+}
+
+.dark_mode_button.active {
+    background-color: var(--color-blue);
+    color: var(--color-white);
 }
 
 .window_container {
@@ -91,4 +135,10 @@
 
 .dot.active {
     background-color: var(--color-blue);
+}
+
+@include mixins.example {
+   .viewport {
+        padding: 0 15%;
+    }
 }
