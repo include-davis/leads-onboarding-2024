@@ -23,7 +23,9 @@ export default function Home() {
 
   return (
     <ThemeContext.Provider value={{selectedTheme, updateTheme}}>
-      <div className={styles.container}>
+      <div className={
+        selectedTheme === 'dark' ? styles.container_dark : styles.container
+      }>
         <div className={styles.content}>
           <ThemeSelector/>
           <PinForm className={styles.pin}/>

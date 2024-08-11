@@ -2,22 +2,58 @@ import styles from '@/app/(pages)/_styles/components/carousel.module.scss'
 import { useState } from 'react';
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
-const slides = [1, 2, 3, 4, 5, 7, 9]
-const middle_index = Math.ceil(slides.length / 2) - 1;
+const slides = [1, 2, 3, 4, 5, 6, 7];
+
+// Get an extended version of the slides to peek make an infinite scroll
+function extendSlides(slides) {
+  const first = slides[0];
+  const last = slides.at(-1);
+  // const last = slides[slides.length - 1];
+    
+  const second = slides[1 % slides.length];
+  const second_to_last = slides.at(-2);
+  // const second_to_last = slides[(slides.length - 2 + slides.length) % slides.length];
+    
+  const initial = [second_to_last, last, ...slides, first, second]; // buffer slides to peek
+
+  return initial;
+}
 
 export default function Carousel() {
+  
+  const [extendedSlides, setExtendedSlides] = useState(extendSlides(slides));
+  const middle_index = Math.ceil(extendedSlides.length / 2) - 1;
+
   const [currentSlide, setCurrentSlide] = useState(middle_index)
   
   function nextSlide() {
-    const next = currentSlide + 1;
+    // const current = currentSlide;
+    // const next = (currentSlide + 1) % slides.length;
     
-    setCurrentSlide(next <= slides.length - 1 ? next : 0);
+    // setCurrentSlide(next);
+     
+    // Remove first and add one to the end
+    const last_idx = slides.indexOf(extendedSlides.at(-1))
+    // const last_idx = slides.indexOf(extendedSlides[extendedSlides.length - 1])
+    const new_last_slide = slides[(last_idx + 1) % slides.length]
+    
+    setExtendedSlides([...extendedSlides.slice(1), new_last_slide]);
+        
   }
 
   function previousSlide() {
-    const previous = currentSlide - 1;
+    // const current = currentSlide;
+    // const previous = (currentSlide - 1 + slides.length) % slides.length;
 
-    setCurrentSlide(previous >= 0 ? previous : slides.length - 1);
+    // setCurrentSlide(previous);
+    
+    // Remove last and add to one to the beginning
+    const first_idx = slides.indexOf(extendedSlides[0]);
+    const new_first_slide = slides[(first_idx - 1 + slides.length) % slides.length];
+
+    setExtendedSlides([new_first_slide, ...extendedSlides.slice(0, -1)])
+
+    // setCurrentSlide(current);
   }
 
   return (
@@ -26,7 +62,7 @@ export default function Carousel() {
       <div className={styles.slider}>
         <div className={styles.slides}>
           <FaArrowLeft className={styles.arrow} onClick={previousSlide}/>
-          {slides.map((slide, key) => 
+          {extendedSlides.map((slide, key) => 
             <Slide 
               key={key} 
               idx={key} 
@@ -37,7 +73,7 @@ export default function Carousel() {
           <FaArrowRight className={styles.arrow} onClick={nextSlide}/>
         </div>
         <div className={styles.dots}>
-          {slides.map((_, key) => 
+          {extendedSlides.map((_, key) => 
           <Dot 
               key={key} 
               idx={key}

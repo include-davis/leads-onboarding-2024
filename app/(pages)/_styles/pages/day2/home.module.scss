@@ -1,4 +1,4 @@
-.container {
+.container, .container_dark {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -8,6 +8,10 @@
 
     padding: 50px;
     // border: 1px blue solid; 
+}
+
+.container_dark {
+    background: lightgrey;
 }
 
 .content {
