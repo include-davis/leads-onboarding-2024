@@ -3,23 +3,14 @@ import styles from '../_styles/days/day2.module.scss';
 // import ImagesSlider from '../_components/day2/ImageSlider.jsx';
 import Carousel from '../_components/day2/carousel.jsx';
 
-/* import img1 from './bloom.png'
-import img2 from 'one.png'
-import img3 from 'viet.png'
-import img4 from 'tutor.png' */
-
-const IMAGES = [
-    "/bloom.png",
-    "/one.png",
-    '/viet.png',
-    '/tutor.png',
-];
-
 
 export default function Day2(){
     return(
-        <div className={styles.container}>
+        <div className={styles.container} data-theme="dark">
             <h1>Carousel</h1>
+            <div className={styles.box}>
+                <h2> This is a box. </h2>
+            </div>
             {/* <ImagesSlider imageUrls={IMAGES}/> */}
             <Carousel/>
         </div>

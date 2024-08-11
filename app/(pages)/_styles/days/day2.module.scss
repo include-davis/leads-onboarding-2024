@@ -1,12 +1,14 @@
+@use '/app/(pages)/globals.scss';
+
 .container {
-    background-color: white;
-    color: black;
+    background-color: var(--background-color);
+    color: var(--primary-text-color);
     padding: 10%;
     margin: auto;
     h1 {
         font-weight: bold;
         font-size: 2rem;
-        color: black;
+        color: var(--background-color);
         text-align: center;
     }
     .carousel {
@@ -18,7 +20,7 @@
         text-align: center;
     }
     button {
-        background-color: black;
+        background-color: var(--background-color);
         display: inline-block;
         border-radius: 50px;
         text-align: center;
