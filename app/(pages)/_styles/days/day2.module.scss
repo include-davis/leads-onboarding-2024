@@ -1,38 +1,46 @@
-@use '/app/(pages)/globals.scss';
+
+@import '/app/(pages)/globals.scss';
+// Remove the :root selector from this file
+// day2.module.scss
 
 .container {
-    background-color: var(--background-color);
-    color: var(--primary-text-color);
-    padding: 10%;
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+  padding: 10%;
+  margin: auto;
+
+  h1 {
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--background-color);
+    text-align: center;
+  }
+
+  .carousel {
     margin: auto;
-    h1 {
-        font-weight: bold;
-        font-size: 2rem;
-        color: var(--background-color);
-        text-align: center;
-    }
-    .carousel {
-        margin: auto;
-        padding: 15%;
-        background-color: pink;
-        align-items: center;
-        display: flex;
-        text-align: center;
-    }
-    button {
-        background-color: var(--background-color);
-        display: inline-block;
-        border-radius: 50px;
-        text-align: center;
-        align-items: center;
-        padding: 20px;
-    }
-    button:hover {
-        background-color: pink;
-        cursor: pointer;
-    }
-    img {
-        text-align: center;
-        align-items: center;
-    }
+    padding: 15%;
+    background-color: pink;
+    align-items: center;
+    display: flex;
+    text-align: center;
+  }
+
+  button {
+    background-color: var(--background-color);
+    display: inline-block;
+    border-radius: 50px;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  button:hover {
+    background-color: pink;
+    cursor: pointer;
+  }
+
+  img {
+    text-align: center;
+    align-items: center;
+  }
 }
