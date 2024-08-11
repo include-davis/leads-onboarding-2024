@@ -1,0 +1,31 @@
+.rect_main {
+    width: 200px;
+    height: 100px;
+    margin: 20px;
+    z-index: 1;
+}
+.rect_side {
+    width: 100px;
+    height: 50px;
+    margin: 20px;
+}
+.carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+.dot_array {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.carousel_body {
+    text-align: center;
+    padding: 20px;
+}
