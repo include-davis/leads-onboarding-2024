@@ -1,12 +1,9 @@
-@use './mixins.scss';// globals.scss
-
+/* // @use './mixins.scss';
 :root {
-  --color1: #4287f5;
+  --color1: white;
   --color2: #eba134;
-  --background-color: white;
-  --primary-text-color: black;
 
-  --text-color1: #4a5566;
+  --text-color1: black;
   --text-color2: #f0f6ff;
 
   --navbar-height: 80px;
@@ -23,6 +20,7 @@
   padding: 0;
   margin: 0;
   font-family: 'Inter', sans-serif;
+  background-color: var(--color1);
 }
 
 p,
@@ -32,5 +30,6 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--text-primary);
-}
+  color: var(  --text-color1);
+}  
+ */
