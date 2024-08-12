@@ -1,0 +1,83 @@
+
+
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 583px;
+    height: 673px; 
+    border-radius: 16px;
+    padding: 30px;
+    a:link {
+        text-decoration: none;
+    }
+}
+
+.quarter {
+    color: var(--color-gray);
+    font-family: var(--font-family-inter);
+    font-weight: 400;
+    font-size: 1.125rem;
+}
+
+
+
+.projectName {
+    color: var(--color-white); 
+    font-family: var(--font-family-inter);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.description {
+    color: var(--color-gray);
+    font-family: var(--font-family-inter);
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.imgContainer {
+    position: relative; 
+    width: 523px;
+    height: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.projectInfo {
+    border-top: 0.5px solid var(--color-white);
+    padding-top: 16px;
+    gap: 8px;
+}
+
+.visitButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--color-white); 
+    border: none; 
+    font-family: var(--font-family-inter);
+    font-weight: 400;
+    font-size: 1.125rem;
+    width: 100%;
+    height: 62px;
+    border-radius: 32px;
+    p {
+        padding-left: 8px;
+    }
+    
+}
+
+.circle {
+
+    background-color: #0ACF83;
+    width: 8px; 
+    height: 8px;
+    border-radius: 50%;
+    //padding: 8px;
+
+}
+
