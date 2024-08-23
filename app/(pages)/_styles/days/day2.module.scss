@@ -1,7 +1,5 @@
 
 @import '/app/(pages)/globals.scss';
-// Remove the :root selector from this file
-// day2.module.scss
 
 .container {
     
@@ -22,14 +20,12 @@
   color: var(--primary-text-color);
   padding: 10%;
   margin: auto;
-  border: 3px red solid;
 
   h1 {
     font-weight: bold;
     font-size: 2rem;
     color: var(--primary-text-color);
     text-align: center;
-    border: 3px red solid;
   }
 
   .carousel {
@@ -38,23 +34,20 @@
     align-items: center;
     display: flex;
     text-align: center;
-    border: 3px red solid;
   }
 
   .box {
-    border: 3px red solid;
     text-align: center;
     align-items: center;
   }
 
   button {
-    background-color: var(--background-color);
+    background-color: purple;
     display: inline-block;
     border-radius: 50px;
     text-align: center;
     align-items: center;
     padding: 20px;
-    border: 3px red solid;
   }
 
   button:hover {
@@ -65,7 +58,6 @@
   img {
     text-align: center;
     align-items: center;
-    border: 3px red solid;
   }
 }
 
