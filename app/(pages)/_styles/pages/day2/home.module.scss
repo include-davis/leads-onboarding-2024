@@ -1,0 +1,25 @@
+.container, .container_dark {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    gap: 50px;
+
+    padding: 50px;
+    // border: 1px blue solid; 
+}
+
+.container_dark {
+    background: lightgrey;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 180px;
+    // border: 1px green solid;
+}

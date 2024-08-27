@@ -1,0 +1,111 @@
+@use 'app/(pages)/mixins';
+
+.white_bg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    padding-top: 100px;
+}
+
+.purple_bg {
+    background: var(--purple-gradient);
+    background-color: var(--include-purple);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-bottom: 100px;
+
+}
+
+.mission {
+    width: 60%;
+    font-size: 1.8rem;
+    text-align: center;
+
+    font-weight: 700;
+    line-height: 1.25;
+    padding-bottom: 250px;
+
+    @include mixins.phone {
+        font-size: 1.5rem;
+        padding-bottom: 350px;
+    }
+
+}
+
+.image_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    // border: solid red 1px;
+    
+    position: relative;
+    
+    img {
+        width: 100%;
+        max-width: 900px;
+        aspect-ratio: 2;
+        object-fit: cover;
+        transform: translateY(-50%);
+        border-radius: 24px;
+    }
+
+    @include mixins.phone {
+        img {
+            aspect-ratio: unset;
+        }
+    }
+}
+
+.img {
+    @include mixins.phone {
+        display: none;
+    }
+}
+
+.img_small {
+    display: none;
+
+    @include mixins.phone {
+        display: block;
+    }
+}
+
+.work_container {
+    color: var(--text-white);
+    text-align: center;
+    width: 90%;
+    font-size: 2rem;
+    
+    h1 {
+        font-size: 3.25rem;
+        padding-top: 16px;
+    }
+
+    p {
+        font-size: 1.75rem;
+        color: var(--text-grey);
+        padding: 40px 0px;
+    }
+}
+
+.cards {
+    display: flex;
+
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+    flex-wrap: wrap;
+    gap: 32px;
+
+    @include mixins.phone {
+        align-items: center;
+        flex-direction: column;
+        // border: 1px red solid;
+    }
+}
+
