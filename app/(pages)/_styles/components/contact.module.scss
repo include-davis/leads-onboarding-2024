@@ -1,0 +1,33 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 20%;
+    padding: 16px;
+    border: 3px rgb(191, 151, 123) solid;
+}
+
+.input {
+    display: flex;
+    justify-content: space-between;
+}
+
+.question {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4px;
+    gap: 4px;
+}
+
+.question_box {
+    height: 50px;
+}
+
+.button {
+    height: 30px;
+}
+
+.spinner {
+    display: flex;
+    justify-content: space-evenly;
+}
