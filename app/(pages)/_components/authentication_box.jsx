@@ -11,7 +11,7 @@ function ErrorBox() {
     return (
         <div className={styles.err_box}>
             { open && <div className={styles.error}>
-                <p style={{color: "red", textAlign: "center"}}>Too many incorrect attempts, try again in 10 seconds!</p>
+                <p style={{color: "red", textAlign: "center"}}>Too many attempts, try again in 10 seconds!</p>
                 <button onClick={()=>{errbox_ClickHandler()}}> X </button>
             </div> }
         </div>

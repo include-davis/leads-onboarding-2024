@@ -3,15 +3,14 @@ import { IoIosArrowDown } from "react-icons/io";
 import styles from "@/app/(pages)/_styles/language_dropdown.module.scss";
 import { LangContext } from "../day2/lang";
 
-function Dropdown_Table(props) {
-
+function Dropdown_Table({ lang_list, setOpen, setLang }) {
     function setClose(selectedLang) {
-        props.setOpen(false);
-        props.setLang(selectedLang);
+        setOpen(false);
+        setLang(selectedLang);
     }
 
-    const table = props.lang_list.map((lang)=>{ 
-        return <button key={lang} onClick={()=>{setClose(lang)}} className={styles.container}>
+    const table = Object.entries(lang_list).map(([key, lang])=>{ 
+        return <button key={key} onClick={()=>{setClose(key)}} className={styles.container}>
             <h4 style={{color: "purple"}}> {lang}</h4></button> 
             })
     
@@ -24,15 +23,10 @@ function Dropdown_Table(props) {
 
 export default function Language_Dropdown() {
     const [open, setOpen] = useState(false);
-    const [lang, setLang] = useContext(LangContext);
-    const lang_list = {'en':"English", 'es':"Spanish", 'ml':"Malayalam"};
+    const {lang, setLang, lang_list} = useContext(LangContext);
 
     function toggleOpen() {
         setOpen((prev)=>(!prev));
-    }
-
-    function get_currLang() {
-        
     }
 
     return (
@@ -41,7 +35,7 @@ export default function Language_Dropdown() {
                 <h4 style={{borderRight: "2px", borderLeft: "0", borderTop: "0", borderBottom: "0", 
                     borderColor: "black", borderStyle: "solid", paddingRight: "5px", color: "purple"}}>
                     Lng</h4>
-                <h4 style={{width: "70%", color: "purple"}}>{currLang}</h4>
+                <h4 style={{width: "70%", color: "purple"}}>{ lang_list[lang] }</h4>
                 {open ? <IoIosArrowDown style={{transform: "rotateX(180deg)"}}/> : <IoIosArrowDown />}
             </button>
             {open && <Dropdown_Table setOpen={setOpen} setLang={setLang} lang_list={lang_list}/>}

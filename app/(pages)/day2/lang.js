@@ -1,3 +1,7 @@
 import { createContext } from "react";
 
-export const LangContext = createContext(['en', ()=>{}]);
+export const LangContext = createContext({
+    lang: 'en',
+    setLang: ()=>{},
+    lang_list: [],
+});
