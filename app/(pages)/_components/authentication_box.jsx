@@ -1,5 +1,6 @@
 import styles from "@/app/(pages)/_styles/authentication_box.module.scss";
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useContext } from "react";
+import { ThemeContext } from "../day2/theme";
 
 function ErrorBox() {
     const [open, setOpen] = useState(true);
@@ -22,6 +23,7 @@ export default function Aunthentication_Box() {
     const count = useRef(0);
     const [freeze, setFreeze] = useState(false);
     const [freezeCount, setFreezeCount] = useState(false);
+    const theme = useContext(ThemeContext);
 
     useEffect(() => {
         setTimeout(() => {
@@ -41,7 +43,7 @@ export default function Aunthentication_Box() {
         }
 
     return (
-        <div className={styles.container}>
+        <div className={`${styles.container} ${theme=="dark" && styles.dark_bg}`}>
             <h4 style={{width: "100%", textAlign: "left", marginBottom: "10px", color: "purple"}}>Password:</h4>
             { freeze && <ErrorBox /> }
             <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>

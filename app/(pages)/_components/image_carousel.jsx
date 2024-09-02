@@ -1,13 +1,15 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Image from "next/image";
 import { IoIosArrowBack } from "react-icons/io";
 import { FaCircle } from "react-icons/fa6";
 import styles from "@/app/(pages)/_styles/image_carousel.module.scss"
+import { ThemeContext } from "../day2/theme";
 
 
 export default function Image_Carousel() {
     const [curr, setCurr] = useState(0);
     const img_paths = ["/b&v_logo.png", "/design-home.png", "/ielc_logo.png", "/nvsi_logo.png", "/oneloop_logo.png"];
+    const theme = useContext(ThemeContext);
 
 
     function click_back() {
@@ -37,14 +39,14 @@ export default function Image_Carousel() {
         <div className={styles.main}>
             <div className={styles.div_slides}>
                 {imgs.map((img) => { return img })}
-                <IoIosArrowBack className={styles.left_arrow} onClick={()=>{click_back()}} />
-                <IoIosArrowBack className={styles.right_arrow} onClick={()=>{click_next()}} />
+                <IoIosArrowBack className={`${styles.left_arrow} ${theme=="dark" && styles.dark_arrow}`} onClick={()=>{click_back()}} />
+                <IoIosArrowBack className={`${styles.right_arrow} ${theme=="dark" && styles.dark_arrow}`} onClick={()=>{click_next()}} />
             </div>
             <div className={styles.div_circles}>
                 { img_paths.map((path, index) => { 
                     let style = "";
                     if (index == curr) { style = styles.selected }
-                    return <FaCircle key={("circle").concat(toString(index))} className={[styles.circle, style].join(" ")}/> })}
+                    return <FaCircle key={("nav_circle").concat(index.toString())} className={[styles.circle, style].join(" ")}/> })}
             </div>
         </div>
     )
