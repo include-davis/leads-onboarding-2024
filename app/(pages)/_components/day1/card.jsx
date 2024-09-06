@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import styles from "@/(pages)/_styles/day1/card.module.scss";
+import styles from "../../_styles/day1/card.module.scss";
 import Link from 'next/link';
 
 
