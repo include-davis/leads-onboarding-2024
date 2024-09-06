@@ -4,10 +4,9 @@ const senderEmail = process.env.SENDER_EMAIL;
 const password = process.env.SENDER_PWD; 
 const targetEmail = process.env.TARGET_EMAIL; 
 
-export async function contactFormMailer(req, res) {
-    if (req.method === "POST") {
+export async function POST(req: Request) {
         try {
-            const {name, email, question } = JSON.parse(req.body);
+            const {name, email, question } = await req.json();
             const transporter = nodemailer.createTransport({
                 host: 'smtp.ethereal.email',
                 port: 587,
@@ -40,12 +39,18 @@ export async function contactFormMailer(req, res) {
               };
 
               await transporter.sendMail(mailOptions);
-              res.status(200).json({ok: true, data:msg, error:null});
+              return new Response(JSON.stringify({ ok: true, data: msg }), {
+                status: 200,
+                headers: {
+                  "Content-Type": "application/json",
+                },
+              });
         } catch (e){
-            res.status(500).json({ok:false, error: e.message});
+            return new Response(
+                JSON.stringify({ ok: false, error: e.message }),
+                { status: 500, headers: { "Content-Type": "application/json" } }
+              );
+            
         }
-    }else {
-        res.status(405).json({ok:false, data:null, error:"Request method not allowed"})
-    }
 }
 

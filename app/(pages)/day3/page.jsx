@@ -42,43 +42,45 @@ export default function Day3() {
         <div className={styles.mainContainer}>
             <h1>Contact Us</h1>
             <form ref={formRef} onSubmit={formHandler}>
-                <div className={styles.infoSection}>
-                    <div className={styles.infoContainer}>
-                        <p className={styles.question}>Name</p>
-                        <input 
-                            className={styles.answerContainer}
-                            type="text"
-                            id="name"
-                            name="name"
-                            placeholder="Full Name"
-                            required
-                            ></input>
+                <div className={styles.formSection}>
+                    <div className={styles.infoSection}>
+                        <div className={styles.infoContainer}>
+                            <p className={styles.question}>Name</p>
+                            <input 
+                                className={styles.answerContainer}
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Full Name"
+                                required
+                                ></input>
+                        </div>
+                        <div className={styles.infoContainer}>
+                            <p className={styles.question}>Email Address</p>
+                            <input 
+                                className={styles.answerContainer}
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Email"
+                                required
+                                ></input>
+                        </div>
+                        <div className={styles.messageContainer}>
+                            <p className={styles.question}>Question</p>
+                            <textarea   
+                                className={styles.textBoxContainer}
+                                name="question"
+                                placeholder="Enter your question"
+                                cols="50"
+                                rows="10"
+                            />
+                        </div>
                     </div>
-                    <div className={styles.infoContainer}>
-                        <p className={styles.question}>Email Address</p>
-                        <input 
-                            className={styles.answerContainer}
-                            type="email"
-                            id="email"
-                            name="email"
-                            placeholder="Email"
-                            required
-                            ></input>
-                    </div>
-                    <div className={styles.infoContainer}>
-                        <p className={styles.question}>Question</p>
-                        <textarea   
-                            className={styles.answerContainer}
-                            name="question"
-                            placeholder="Enter your question"
-                            cols="50"
-                            rows="10"
-                        />
-                    </div>
+                    <button type="submit" className={styles.button} disabled={pending}>
+                        {pending ? "Submitting..." : "Submit"}
+                    </button>
                 </div>
-                <button type="submit" className={styles.button} disabled={pending}>
-                    {pending ? "Submitting..." : "Submit"}
-                </button>
             </form>
         </div>
         
