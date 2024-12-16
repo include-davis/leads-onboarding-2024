@@ -1,0 +1,45 @@
+.mainContainer {
+    display:flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 60px; 
+    width: 800px;
+    
+}
+
+.infoSection {
+    display:flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.infoContainer {
+    display:flex;
+    justify-content: space-between;
+
+}
+
+.button {
+    background-color: black; 
+    color: white;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    
+    
+}
+
+.messageContainer {
+    display: flex; 
+    flex-direction: column;
+    gap: 8px;
+}
+
+.textBoxContainer {
+    width: 100%; 
+}
+
+
+
+
+
