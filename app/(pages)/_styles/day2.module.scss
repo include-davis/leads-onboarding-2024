@@ -1,0 +1,82 @@
+@use '/app/\(pages\)/_styles/mixins.scss';
+
+.main {
+    padding: 40px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+
+    button {
+        padding: 5px 10px;
+        border: 1px solid black;
+        border-radius: 5px;
+        box-shadow: 1px 1px 5px #00000030;
+        cursor: pointer;
+    }
+
+    input {
+        border: 1px solid gray;
+        font-size: 1.5rem;
+        padding: 10px;
+        border-radius: 10px;
+        max-width: 150px;
+    }
+    
+}
+
+.mainContent {
+    background-color: rgb(242, 242, 242);
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #00000030;
+    gap: 10px;
+
+    display: flex;
+    flex: 1;
+    max-width: 600px;
+
+    @include mixins.phone {
+        flex-direction: column-reverse;
+    }
+}
+
+.vault {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    flex: 1;
+    max-width: 500px;
+
+    
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+}
+
+.submitButton {
+    background-color: white;
+}
+
+.deactivated {
+    background-color: gray;
+}
+
+.languageSwitcher {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.languageSwitcher p {
+    font-size: 0.8rem;
+    color: gray;
+}
+
+.languageSwitcher button {
+    background-color: lightblue;
+}
