@@ -1,0 +1,222 @@
+.pagewrapper {
+    background-image: linear-gradient(to right, #24154f , #362073, #362073, #362073, #24154f);
+    padding: 10%;
+}
+
+.workcontainer {
+    text-align: center;
+    h1 {
+        font-size: 3.25rem;
+        margin: 32px;
+        margin-top: 15px;
+        color: white;
+    }
+    p {
+        font-size: 1.75rem;
+        margin: 32px;
+        color: #d0d0d0;
+    }
+}
+
+.cardcontainer {
+    @media screen and (max-width: 720px) {
+        display: flex;
+        align-items: center;
+        align-items: center;
+        flex-direction: column;
+        max-width: 1200px;
+        width: 100%;
+        margin: auto;
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+    }
+    @media screen and (min-width: 720px) {
+        display: flex;
+        flex-wrap: wrap;
+        /* 
+        align-items: center;
+        align-items: center;
+        flex-direction: column;
+        max-width: 1200px;
+        width: 50%;
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;
+        gap: 32px; */
+    }
+}
+
+.cardinfo {
+    width: 47%;
+    text-align: left;
+    color: white;
+    background-color: #5e498c;
+    padding: 40px;
+    margin: 15px;
+    border-radius: 20px;
+    @media screen and (max-width: 720px) {
+        width: 100%;
+    }
+    hr {
+        margin-top: 10px;
+    }
+    h4 {
+        margin-top: 15px;
+        font-weight: bold;
+        font-size: 1.4rem;
+    }
+    p {
+        margin-top: 5px;
+    }
+    button {
+        padding:20px;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 30px;
+        border: none;
+        color: white;
+        margin-top: 15px;
+        cursor: pointer;
+    }
+    img {
+        margin-top: 15px;
+        border-radius: 10px;
+        width:100%;
+        height:auto;
+    }
+    .card_dot {
+        color: #0acf83;
+    }
+}
+
+/*
+.card {
+    background-color: #5e498c;
+    /* border-radius: 20px;
+    padding: 16px;
+    text-align: left;
+    display: inline-block; 
+    box-sizing: border-box;
+    border-radius: 20px;
+    padding: 30px;
+    width: calc(50% - 16px);
+    height: auto;
+    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+
+    .card_date {
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .card_img {
+        font-size: 18px;
+        width: 100%;
+    }
+
+    .card_name {
+        width: 100%;
+        color: white;
+        font-size: 24px;
+        font-weight: 400;
+        margin-top: 16px;
+    }
+
+    .card_description {
+        width: 100%;
+        font-style: normal;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+    .card_button {
+        width: 100%;
+        border-color: transparent;
+        border-radius: 100px;
+        font-size: 18px;
+        padding: 20px 40px;
+        margin-top: auto;
+        cursor: pointer;
+    }
+
+    .card_dot {
+        color: #0acf83;
+    }
+}
+
+/*
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: hsla(0, 0%, 100%, .1);
+    text-align: left;
+    width: 50%;
+    @media screen and (max-width: 720px) {
+        flex-direction: column;
+        flex-wrap: none;
+        
+    }
+}
+
+.card {
+    /* box-sizing: border-box;
+    background-color: hsla(0, 0%, 100%, .1);
+    border-radius: 20px;
+    text-align: left;
+    padding: 30px;
+    margin: 32px;
+    
+    /* justify-content: space-around;
+    display: flex;
+    margin: auto;
+    flex-wrap: wrap;
+    gap: 32px;
+    flex-direction: column;
+    height: auto;
+    justify-content: space-around;
+    
+    row-gap: 8px; 
+
+
+    .card_date {
+        font-size: 18px;
+    }
+
+    .card_img {
+        font-size: 18px;
+    }
+
+    .card_name {
+        color: white;
+        font-size: 24px;
+        font-weight: 400;
+        margin-top: 16px;
+    }
+
+    .card_description {
+        font-style: normal;
+        font-weight: 400;
+        margin-bottom: 20px;
+    }
+
+    .card_button {
+        width: 100%;
+        border-color: transparent;
+        border-radius: 100px;
+        font-size: 18px;
+        padding: 20px 40px;
+        margin-top: auto;
+        cursor: pointer;
+    }
+
+    .card_dot {
+        color: #0acf83;
+    }
+}
+
+*/

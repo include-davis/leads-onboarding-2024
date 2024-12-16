@@ -1,0 +1,70 @@
+
+@import '/app/(pages)/globals.scss';
+
+.container {
+    
+    --background-color: white;
+    --primary-text-color: black;
+    
+    [data-theme="dark"] {
+        --background-color: black;
+        --primary-text-color: white;
+    }
+
+    [data-theme="light"] {
+        --background-color: white;
+        --primary-text-color: black;
+    }
+      
+  background-color: var(--background-color);
+  color: var(--primary-text-color);
+  padding: 10%;
+  margin: auto;
+
+  h1 {
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--primary-text-color);
+    text-align: center;
+  }
+
+  .carousel {
+    margin: 15%;
+    background-color: pink;
+    align-items: center;
+    display: flex;
+    text-align: center;
+  }
+
+  .box {
+    text-align: center;
+    align-items: center;
+  }
+
+  button {
+    background-color: purple;
+    display: inline-block;
+    border-radius: 50px;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  button:hover {
+    background-color: pink;
+    cursor: pointer;
+  }
+
+  img {
+    text-align: center;
+    align-items: center;
+  }
+}
+
+// toggle for light and dark mode
+.togglecontainer {
+    position: absolute;
+    top: 2em;
+    right: 2em;
+}
+
