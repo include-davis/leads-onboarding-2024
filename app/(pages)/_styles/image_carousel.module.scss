@@ -1,0 +1,90 @@
+.main {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.div_slides {
+    position: relative;
+    width: 100%;
+    height: 300px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.div_slide {
+    position: relative;
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.prev {
+    translate: 0px 10px;
+    box-shadow: 10px 5px 5px gray;
+}
+
+.curr {
+    translate: 0px -10px;
+    box-shadow: 10px 5px 5px gray;
+}
+
+.next {
+    translate: 0px 10px;
+    box-shadow: 10px 5px 5px gray;
+}
+
+.left_arrow {
+    font-size: 3rem;
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    translate: 0px -50%;
+}
+
+.left_arrow:active {
+    color: green
+}
+
+.right_arrow {
+    font-size: 3rem;
+    position: absolute;
+    rotate: 180deg;
+    right: 40px;
+    top: 50%;
+    translate: 0px -50%;
+}
+
+.right_arrow:active {
+    color: green
+}
+
+.dark_arrow {
+    color: aliceblue;
+}
+
+.div_circles {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+
+.circle {
+    font-size: 1rem;
+    color: gray;
+}
+
+.selected {
+    color: gainsboro;
+}

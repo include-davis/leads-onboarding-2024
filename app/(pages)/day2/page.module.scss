@@ -1,0 +1,25 @@
+.main {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom right, rgb(241, 195, 137), rgb(235, 213, 217), rgb(186, 214, 221), rgb(235, 175, 65));
+    //background-color: rgb(248, 248, 248);
+}
+
+.dark_bg {
+    background-image: linear-gradient(to bottom right, rgb(80, 63, 94), rgb(68, 25, 33), rgb(29, 53, 59), rgb(86, 59, 9));
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    justify-content: flex-end;
+    padding-right: 50px;
+}

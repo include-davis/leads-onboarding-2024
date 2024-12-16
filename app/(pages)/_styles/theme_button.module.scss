@@ -1,0 +1,44 @@
+.main {
+    width: 80px;
+    height: 40px;
+    background-color:yellow;
+    border-radius: 40px;
+}
+
+.dark_bg {
+    background-color: darkcyan;
+}
+
+.circle {
+    height: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 40px;
+    background-color: gold;
+}
+
+@keyframes move_right {
+    from {translate: 0px 0px;
+    background-color: gold;}
+    to {translate: 40px 0px;
+    background-color: darkmagenta;}
+}
+
+@keyframes move_left {
+    from {translate: 40px 0px;
+    background-color: darkmagenta;}
+    to {translate: 0px 0px;
+    background-color: gold;}
+}
+
+.left {
+    animation-name: move_left;
+    animation-duration: 1s;
+}
+
+.right {
+    background-color: darkmagenta;
+    translate: 40px 0px;
+    animation-name: move_right;
+    animation-duration: 1s;
+}
+
